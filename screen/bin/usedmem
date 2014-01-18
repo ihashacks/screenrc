@@ -1,0 +1,5 @@
+#!/bin/bash
+memtotal=$(free | sed -n '2p' | awk ' { print $2 } ')
+memused=$(free | sed -n '2p' | awk ' { print $3 } ')
+memusedpct=$(echo "scale=2; $memused/$memtotal" | bc | sed -e 's/\.//')
+echo "$memusedpct%"
