@@ -1,5 +1,6 @@
 #!/bin/bash
 #distro=$(lsb_release -d | awk -F'\t' ' { print $2 } ')
 #distro=$(lsb_release -d | awk ' { print $3 } ' | tr A-Z a-z)
-distro=$(lsb_release -r | awk ' { print $2 } ')
+#distro=$(lsb_release -r | awk ' { print $2 } ')
+distro=$(lsb_release -d | awk  ' { print $2,$3 } ')
 echo "$distro"
