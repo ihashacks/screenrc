@@ -41,7 +41,7 @@ backtick 2 3600 3600 $HOME/.screen/bin/distro
 # status bar
 
 hardstatus alwayslastline                                        
-hardstatus string '%{gk}[%{G}%H (%2`)%{g}][%= %{wk}%?%-Lw%?%{=b kR}[%{W}%n*%f %t%?(%u)%?%{=b kR}]%{= kw}%?%+Lw%?%?%= %{g}][%{G}%l%{g}][%{G}%1`%{g}][%{G}%c%{g}]'
+hardstatus string '%{gk}[%{G}%{W}%H%{w} %{G}(%{g}%{W}%2`%{w}%{G})%{g}%{g}][%= %{wk}%?%-Lw%?%{=b kR}[%{W}%n*%f %t%?(%u)%?%{=b kR}]%{= kw}%?%+Lw%?%?%= %{g}][%{G}%l%{g}][%{G}%1`%{g}][%{G}%c%{g}]'
 
 
 
