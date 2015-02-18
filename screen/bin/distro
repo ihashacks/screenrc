@@ -4,7 +4,9 @@
 #distro=$(lsb_release -r | awk ' { print $2 } ')
 if [ -e /etc/redhat-release ]; then
 	distro=$(awk ' { print $1,$3 } ' /etc/redhat-release)
-else
+elif [ -x /usr/bin/lsb_release ]; then
 	distro=$(lsb_release -ds)
+else
+  distro=$(grep ^PRETTY_NAME /etc/os-release | awk -F\" ' { print $2 } ')
 fi
 echo "$distro"
